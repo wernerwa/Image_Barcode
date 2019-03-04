@@ -23,10 +23,6 @@
  * @link       http://pear.php.net/package/Image_Barcode
  */
 
-require_once "PEAR.php";
-require_once "Image/Barcode.php";
-
-
 /**
  * Image_Barcode_int25 class
  *

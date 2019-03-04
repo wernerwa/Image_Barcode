@@ -36,8 +36,6 @@
   *  density:        22 bars/inch    = 8.66 bars/cm
   */
 
-require_once 'Image/Barcode.php';
-
 
 /**
  * Image_Barcode_postnet class
