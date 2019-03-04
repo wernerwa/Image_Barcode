@@ -249,5 +249,4 @@ class Image_Barcode_ean13 extends Image_Barcode
         return $img;
     } // function create
 
-} // class
-?>
+}

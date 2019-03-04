@@ -148,7 +148,7 @@ class Image_Barcode_int25 extends Image_Barcode
 
                 // Left enought space to draw even char (white)
                 $elementwidth = (substr($this->_coding_map[$evenchar], $baridx, 1)) ?  $this->_barthickwidth : $this->_barthinwidth;
-                $xpos += $elementwidth; 
+                $xpos += $elementwidth;
                 $xpos ++;
             }
         }
@@ -166,5 +166,4 @@ class Image_Barcode_int25 extends Image_Barcode
         return $img;
     } // function create
 
-} // class
-?>
+}

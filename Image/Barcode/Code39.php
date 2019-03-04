@@ -298,4 +298,3 @@ class Image_Barcode_Code39 extends Image_Barcode
         return preg_match( "/[^0-9A-Z\-*+\$%\/. ]/", $text );
     }
 }
-?>

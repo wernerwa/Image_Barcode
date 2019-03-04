@@ -112,4 +112,3 @@ class Image_Barcode extends PEAR
         }
     }
 }
-?>

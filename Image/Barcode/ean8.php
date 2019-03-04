@@ -16,11 +16,11 @@
  *
  * @category   Image
  * @package    Image_Barcode
- * @author     Tobias Frost <tobi@coldtobi.de> , 
+ * @author     Tobias Frost <tobi@coldtobi.de> ,
  * 			   based on EAN13 code by Didier Fournout <didier.fournout@nyc.fr>
  * @copyright  2005 The PHP Group
  * @license    http://www.php.net/license/3_0.txt  PHP License 3.0
- * @version    CVS: $Id: 
+ * @version    CVS: $Id:
  * @link       http://pear.php.net/package/Image_Barcode
  */
 
@@ -31,7 +31,7 @@
  *
  * @category   Image
  * @package    Image_Barcode
- * @author     Tobias Frost <tobi@coldtobi.de> , 
+ * @author     Tobias Frost <tobi@coldtobi.de> ,
  * 			   based on EAN13 code by Didier Fournout <didier.fournout@nyc.fr>
  * @copyright  2005 The PHP Group
  * @license    http://www.php.net/license/3_0.txt  PHP License 3.0
@@ -218,5 +218,4 @@ class Image_Barcode_ean8 extends Image_Barcode
         return $img;
     } // function create
 
-} // class
-?>
+}

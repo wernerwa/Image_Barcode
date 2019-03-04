@@ -204,7 +204,7 @@ class Image_Barcode_upca extends Image_Barcode
         $xpos += $this->_barwidth;
 
 
-        foreach ($this->_number_set[$key]['L'] as $bar) { 
+        foreach ($this->_number_set[$key]['L'] as $bar) {
             if ($bar) {
                 imagefilledrectangle($img, $xpos, 0, $xpos + $this->_barwidth - 1, $barcodelongheight, $black);
             }
@@ -218,7 +218,7 @@ class Image_Barcode_upca extends Image_Barcode
             $value=substr($text,$idx,1);
             imagestring ($img, $this->_font, $xpos+1, $this->_barcodeheight, $value, $black);
 
-            foreach ($this->_number_set[$value]['L'] as $bar) { 
+            foreach ($this->_number_set[$value]['L'] as $bar) {
                 if ($bar) {
                     imagefilledrectangle($img, $xpos, 0, $xpos + $this->_barwidth - 1, $this->_barcodeheight, $black);
                 }

@@ -17,7 +17,7 @@
  * - 7 Unit Stop Character
  * - 10 Unit Quiet Zone
  *
- * I originally wrote this algorithm in Visual Basic 6 for a Rapid 
+ * I originally wrote this algorithm in Visual Basic 6 for a Rapid
  * Software Development class, where we printed Code128 B bar codes
  * to read using Cue Cat bar code readers.  I rewrote the algorithm
  * using PHP for inclusion in the PEAR Image_Barcode project.
@@ -160,7 +160,7 @@ class Image_Barcode_code128 extends Image_Barcode
             $black
         );
 
-        // We set $xpos to 10 so we start bar printing after 
+        // We set $xpos to 10 so we start bar printing after
         // position 10 to simulate the 10 pixel "Quiet Zone"
         $xpos = 10;
 
@@ -337,5 +337,4 @@ class Image_Barcode_code128 extends Image_Barcode
         return $retval;
     }
 
-} // class
-?>
+}
