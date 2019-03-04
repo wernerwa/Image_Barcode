@@ -51,35 +51,35 @@ class Image_Barcode_upca extends Image_Barcode
      * Barcode type
      * @var string
      */
-    var $_type = 'upca';
+    protected $_type = 'upca';
 
     /**
      * Barcode height
      *
      * @var integer
      */
-    var $_barcodeheight = 50;
+    protected $_barcodeheight = 50;
 
     /**
      * Font use to display text
      *
      * @var integer
      */
-    var $_font = 2;  // gd internal small font
+    protected $_font = 2;  // gd internal small font
 
     /**
      * Bar width
      *
      * @var integer
      */
-    var $_barwidth = 1;
+    protected $_barwidth = 1;
 
 
     /**
      * Number set
      * @var array
      */
-    var $_number_set = array(
+    protected $_number_set = array(
            '0' => array(
                     'L' => array(0,0,0,1,1,0,1),
                     'R' => array(1,1,1,0,0,1,0)
@@ -136,7 +136,7 @@ class Image_Barcode_upca extends Image_Barcode
      * @author  Didier Fournout <didier.fournout@nyc.fr>
      *
      */
-    function &draw($text, $imgtype = 'png')
+    public function draw($text, $imgtype = 'png')
     {
         $error = false;
         if ((is_numeric($text)==false) || (strlen($text)!=12)) {

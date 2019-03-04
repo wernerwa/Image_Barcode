@@ -44,11 +44,11 @@
 
 class Image_Barcode_code128 extends Image_Barcode
 {
-    var $_type = 'code128';
-    var $_barcodeheight = 60;
-    var $_font = 2;  
-    var $_barwidth = 1;
-    var $code;
+    protected $_type = 'code128';
+    protected $_barcodeheight = 60;
+    protected $_font = 2;
+    protected $_barwidth = 1;
+    public $code;
 
 
     /**
@@ -70,7 +70,7 @@ class Image_Barcode_code128 extends Image_Barcode
      * the image along with the barcode text and display it to the beholder.
      *
      */
-    function &draw($text, $imgtype = 'png')
+    public function draw($text, $imgtype = 'png')
     {
 
         // We start with the Code128 Start Code character.  We
@@ -192,7 +192,7 @@ class Image_Barcode_code128 extends Image_Barcode
     * the $code array, containing the bar and space pattern
     * for the Code128 B character set.
     */
-    function Image_Barcode_code128()
+    public function __construct()
     {
         $this->code[0] = "212222";  // " "
         $this->code[1] = "222122";  // "!"
@@ -302,7 +302,7 @@ class Image_Barcode_code128 extends Image_Barcode
     /**
     * Return the Code128 code for a character
     */
-    function getCharCode($c) {
+    public function getCharCode($c) {
         $retval = $this->code[ord($c) - 32];
         return $retval;
     }
@@ -310,21 +310,21 @@ class Image_Barcode_code128 extends Image_Barcode
     /**
     * Return the Start Code for Code128
     */
-    function getStartCode() {
+    public function getStartCode() {
         return '211214';
     }
 
     /**
     * Return the Stop Code for Code128
     */
-    function getStopCode() {
+    public function getStopCode() {
         return '2331112';
     }
 
     /**
     * Return the Code128 code equivalent of a character number
     */
-    function getNumCode($index) {
+    public function getNumCode($index) {
         $retval = $this->code[$index];
         return $retval;
     }
@@ -332,7 +332,7 @@ class Image_Barcode_code128 extends Image_Barcode
     /**
     * Return the Code128 numerical equivalent of a character.
     */
-    function getCharNumber($c) {
+    public function getCharNumber($c) {
         $retval = ord($c) - 32;
         return $retval;
     }

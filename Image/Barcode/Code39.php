@@ -49,41 +49,41 @@ class Image_Barcode_Code39 extends Image_Barcode
      * Barcode type
      * @var string
      */
-    var $_type = 'Code39';
+    protected $_type = 'Code39';
 
     /**
      * Barcode height
      *
      * @var integer
      */
-    var $_barcodeheight = 50;
+    protected $_barcodeheight = 50;
 
     /**
      * Bar thin width
      *
      * @var integer
      */
-    var $_barthinwidth = 1;
+    protected $_barthinwidth = 1;
 
     /**
      * Bar thick width
      *
      * @var integer
      */
-    var $_barthickwidth = 3;
+    protected $_barthickwidth = 3;
 
     /**
      * Font size
      *
      * @var integer
      */
-    var $_font_size = 2;
+    protected $_font_size = 2;
 
     /**
      * Coding map
      * @var array
      */
-    var $_coding_map = array(
+    protected $_coding_map = array(
         '0' => '000110100',
         '1' => '100100001',
         '2' => '001100001',
@@ -140,7 +140,7 @@ class Image_Barcode_Code39 extends Image_Barcode
      * @author Ryan Briones <ryanbriones@webxdesign.org>
      *
      */
-    function Image_Barcode_Code39( $text = '', $wThin = 0, $wThick = 0 )
+    public function __construct( $text = '', $wThin = 0, $wThick = 0 )
     {
         // Check $text for invalid characters
         if ( $this->checkInvalid( $text ) ) {
@@ -164,7 +164,7 @@ class Image_Barcode_Code39 extends Image_Barcode
     * @author   Ryan Briones <ryanbriones@webxdesign.org>
     *
     */
-    function plot($noText = false, $bHeight = 0)
+    public function plot($noText = false, $bHeight = 0)
     {
        // add start and stop * characters
        $final_text = '*' . $this->text . '*';
@@ -243,7 +243,7 @@ class Image_Barcode_Code39 extends Image_Barcode
      * @author   Ryan Briones <ryanbriones@webxdesign.org>
      *
      */
-    function &draw($text, $imgtype = 'png', $noText = false, $bHeight = 0)
+    public function draw($text, $imgtype = 'png', $noText = false, $bHeight = 0)
     {
         // Check $text for invalid characters
         if ($this->checkInvalid($text)) {
@@ -270,7 +270,7 @@ class Image_Barcode_Code39 extends Image_Barcode
      *
      *
      */
-    function _dumpCode($code)
+    protected function _dumpCode($code)
     {
         $result = '';
         $color = 1; // 1: Black, 0: White
@@ -293,7 +293,7 @@ class Image_Barcode_Code39 extends Image_Barcode
      * @author  Ryan Briones <ryanbriones@webxdesign.org>
      *
      */
-    function checkInvalid($text)
+    public function checkInvalid($text)
     {
         return preg_match( "/[^0-9A-Z\-*+\$%\/. ]/", $text );
     }

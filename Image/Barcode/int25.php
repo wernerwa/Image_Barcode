@@ -42,34 +42,34 @@ class Image_Barcode_int25 extends Image_Barcode
      * Barcode type
      * @var string
      */
-    var $_type = 'int25';
+    protected $_type = 'int25';
 
     /**
      * Barcode height
      *
      * @var integer
      */
-    var $_barcodeheight = 50;
+    protected $_barcodeheight = 50;
 
     /**
      * Bar thin width
      *
      * @var integer
      */
-    var $_barthinwidth = 1;
+    protected $_barthinwidth = 1;
 
     /**
      * Bar thick width
      *
      * @var integer
      */
-    var $_barthickwidth = 3;
+    protected $_barthickwidth = 3;
 
     /**
      * Coding map
      * @var array
      */
-    var $_coding_map = array(
+    protected $_coding_map = array(
            '0' => '00110',
            '1' => '10001',
            '2' => '01001',
@@ -96,7 +96,7 @@ class Image_Barcode_int25 extends Image_Barcode
      * @since  Image_Barcode 0.3
      */
 
-    function &draw($text, $imgtype = 'png')
+    public function draw($text, $imgtype = 'png')
     {
 
         $text = trim($text);

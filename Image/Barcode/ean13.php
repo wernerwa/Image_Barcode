@@ -43,35 +43,35 @@ class Image_Barcode_ean13 extends Image_Barcode
      * Barcode type
      * @var string
      */
-    var $_type = 'ean13';
+    protected $_type = 'ean13';
 
     /**
      * Barcode height
      *
      * @var integer
      */
-    var $_barcodeheight = 50;
+    protected $_barcodeheight = 50;
 
     /**
      * Font use to display text
      *
      * @var integer
      */
-    var $_font = 2;  // gd internal small font
+    protected $_font = 2;  // gd internal small font
 
     /**
      * Bar width
      *
      * @var integer
      */
-    var $_barwidth = 1;
+    protected $_barwidth = 1;
 
 
     /**
      * Number set
      * @var array
      */
-    var $_number_set = array(
+    protected $_number_set = array(
            '0' => array(
                     'A' => array(0,0,0,1,1,0,1),
                     'B' => array(0,1,0,0,1,1,1),
@@ -124,7 +124,7 @@ class Image_Barcode_ean13 extends Image_Barcode
                         )
         );
 
-    var $_number_set_left_coding = array(
+    protected $_number_set_left_coding = array(
            '0' => array('A','A','A','A','A','A'),
            '1' => array('A','A','B','A','B','B'),
            '2' => array('A','A','B','B','A','B'),
@@ -151,7 +151,7 @@ class Image_Barcode_ean13 extends Image_Barcode
      * @todo       Check if $text is number and len=13
      *
      */
-    function &draw($text, $imgtype = 'png')
+    public function draw($text, $imgtype = 'png')
     {
         // Calculate the barcode width
         $barcodewidth = (strlen($text)) * (7 * $this->_barwidth)

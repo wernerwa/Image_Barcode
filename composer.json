@@ -23,10 +23,9 @@
     },
     "type": "library",
     "require": {
-        "pear/pear_exception": "*"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "*"
+        "php": ">=5.0",
+        "ext-gd": "*",
+        "pear/pear-core-minimal": "^1.10.1"
     },
     "suggest": {
         "pear/php_compat": "Install optionally via your project's composer.json"

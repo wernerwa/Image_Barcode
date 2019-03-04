@@ -56,34 +56,34 @@ class Image_Barcode_postnet extends Image_Barcode
      * Barcode type
      * @var string
      */
-    var $_type = 'postnet';
+    protected $_type = 'postnet';
 
     /**
      * Bar short height
      *
      * @var integer
      */
-    var $_barshortheight = 7;
+    protected $_barshortheight = 7;
 
     /**
      * Bar tall height
      *
      * @var integer
      */
-    var $_bartallheight = 15;
+    protected $_bartallheight = 15;
 
     /**
      * Bar width / scaling factor
      *
      * @var integer
      */
-    var $_barwidth = 2;
+    protected $_barwidth = 2;
 
     /**
      * Coding map
      * @var array
      */
-    var $_coding_map = array(
+    protected $_coding_map = array(
            '0' => '11000',
            '1' => '00011',
            '2' => '00101',
@@ -110,7 +110,7 @@ class Image_Barcode_postnet extends Image_Barcode
      * @since  Image_Barcode 0.3
      */
 
-    function draw($text, $imgtype = 'png')
+    public function draw($text, $imgtype = 'png')
     {
         $text = trim($text);
 
